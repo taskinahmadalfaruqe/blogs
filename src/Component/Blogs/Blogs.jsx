@@ -19,11 +19,16 @@ const Blogs = () => {
     
 
     return (
-        <div className='bg-purple-300 mt-5'>
+        <div className=' mt-5'>
             <h2>Total Blogs: {blogsValue.length}</h2>
             {
-                blogsValue.map(blog=>{
-                    <SingleBlogs singleBlogs={blog} key={blog.id}></SingleBlogs>
+                blogsValue.map(blog=> {
+                    return (
+                        <SingleBlogs
+                            key={blog.id}
+                            blog={blog}
+                        ></SingleBlogs>
+                    )
                 })
             }
         </div>
