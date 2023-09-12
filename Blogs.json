@@ -1,0 +1,52 @@
+[
+    {
+      "id": 1,
+      "cover_title": "The Secret of Smiles",
+      "cover_photo": "https://i.ibb.co/Lvsr79Y/2.png",
+      "author": "Jane Doe",
+      "author_png": "https://i.ibb.co/dGLbCB7/Ellipse-1-2.png",
+      "posted_date": "2023-09-12",
+      "reading_time": 10,
+      "hashtags": ["#happiness", "#smiles", "#joy"]
+    },
+    {
+      "id": 2,
+      "cover_title": "Behind the Mask",
+      "cover_photo": "https://i.ibb.co/x5DGtv8/4.jpg",
+      "author": "John Smith",
+      "author_png": "https://i.ibb.co/CzKZYjw/Ellipse-1-1.png",
+      "posted_date": "2023-09-11",
+      "reading_time": 15,
+      "hashtags": ["#identity", "#mask", "#secrets"]
+    },
+    {
+      "id": 3,
+      "cover_title": "In the Eyes of a Stranger",
+      "cover_photo": "https://i.ibb.co/0cgXcxx/3.png",
+      "author": "Alice Johnson",
+      "author_png": "https://i.ibb.co/kHDLk07/Ellipse-1.png",
+      "posted_date": "2023-09-10",
+      "reading_time": 12,
+      "hashtags": ["#mystery", "#stranger", "#enigma"]
+    },
+    {
+      "id": 4,
+      "cover_title": "Expressions Unveiled",
+      "cover_photo": "https://i.ibb.co/m9Nf9td/1.jpg",
+      "author": "David Wilson",
+      "author_png": "https://i.ibb.co/CB9LfrS/profile.png",
+      "posted_date": "2023-09-09",
+      "reading_time": 8,
+      "hashtags": ["#emotions", "#expressions", "#feelings"]
+    },
+    {
+      "id": 5,
+      "cover_title": "Faces of the World",
+      "cover_photo": "https://i.ibb.co/Lvsr79Y/2.png",
+      "author": "Emily Brown",
+      "author_png": "https://i.ibb.co/wN1nhZv/boy1.png",
+      "posted_date": "2023-09-08",
+      "reading_time": 20,
+      "hashtags": ["#diversity", "#culture", "#world"]
+    }
+]
