@@ -9,7 +9,7 @@ const Blogs = ({handelAddBookMark,readCount}) => {
     // DATA FETCH FROM LOCAL STORAGE
     useEffect(()=>{
         try {
-            fetch('/Blogs.json')
+            fetch('Blogs.json')
             .then(res=>res.json())
             .then(data=>setBlogs(data))
         } catch (error) {
