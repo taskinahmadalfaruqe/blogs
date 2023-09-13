@@ -7,21 +7,23 @@ function App() {
 
   const [bookMarkItem, setBookMarkItem]=useState([]);
   const handelAddBookMark=( addNewBookMarks)=>{
-    const isMatch = bookMarkItem.find(findItemID=> findItemID.id == addNewBookMarks.id);
 
+    const isMatch = bookMarkItem.find(findItemID=> findItemID.id == addNewBookMarks.id);
     if(isMatch){
       return alert("This Blog Is Already Add In BookMark")
     }else{
       const newBookMarks = [...bookMarkItem , addNewBookMarks];
       setBookMarkItem(newBookMarks);
     }
+    
   };
 
   const [readTime, setReadTime]=useState(0);
-  const readCount=(time)=>{
+  const readCount=(time, id)=>{
     const newReadTime= readTime + time;
     setReadTime(newReadTime)
-    console.log(newReadTime)
+    const remainingBookmark = bookMarkItem.filter(item=> item.id !==id);
+    setBookMarkItem(remainingBookmark);
   }
 
   return (

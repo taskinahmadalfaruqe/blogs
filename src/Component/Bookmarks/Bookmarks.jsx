@@ -10,7 +10,7 @@ const Bookmarks = ({bookMarkItem,readTime}) => {
                 <h2 className="text-center font-bold">Bookmark Blogs: {bookMarkItem.length} </h2>
                 <div className="bookMarksCard flex gap-5 flex-col mt-5">
                     {
-                        bookMarkItem.map(singleBookmarkData => {
+                        bookMarkItem.map((singleBookmarkData) => {
                             return (
                                 <SingleBookMark singleBookmarkData={singleBookmarkData} key={singleBookmarkData.id}></SingleBookMark>
                             );
