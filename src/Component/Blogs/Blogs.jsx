@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import './Blogs.css'
 import { useEffect } from 'react';
 import SingleBlogs from '../LodeBlogs/SingleBlogs';
+import PropTypes from 'prop-types';
 
-const Blogs = () => {
+const Blogs = ({handelAddBookMark}) => {
     const [blogsValue, setBlogs]= useState([]);
 
     // DATA FETCH FROM LOCAL STORAGE
@@ -19,13 +19,14 @@ const Blogs = () => {
     
 
     return (
-        <div className='md:mt-5 border-2 border-red-300 w-full lg:w-2/3 grid grid-cols-1 xl:grid-cols-2 gap-5 md:p-5'>
+        <div className='md:mt-5  w-full lg:w-2/3 grid grid-cols-1 xl:grid-cols-2 gap-5'>
             {
                 blogsValue.map(blog=> {
                     return (
                         <SingleBlogs
                             key={blog.id}
                             blog={blog}
+                            handelAddBookMark={handelAddBookMark}
                         ></SingleBlogs>
                     )
                 })
@@ -33,7 +34,9 @@ const Blogs = () => {
         </div>
     );
 };
-
+Blogs.propTypes={
+    handelAddBookMark: PropTypes.func,
+}
 export default Blogs;
 
 
