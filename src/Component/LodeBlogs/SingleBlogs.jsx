@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { BsBookmarkCheckFill } from 'react-icons/bs';
 
-const SingleBlogs = ({blog,handelAddBookMark}) => {
+const SingleBlogs = ({blog,handelAddBookMark,readCount}) => {
     const {cover_photo,author,author_png,posted_date,reading_time,cover_title,hashtags}=blog;
     return (
         <div className='border-2 border-[#eee] p-3 rounded-md text-center lg:text-start'>
@@ -32,7 +32,7 @@ const SingleBlogs = ({blog,handelAddBookMark}) => {
                     hashtags.map((hashtag, index)=>  <a href={hashtag} key={index}>{hashtag}</a>)
                 }
             </div>
-            <button  className='btn btn-primary'>Mark As Read</button>
+            <button onClick={()=>{readCount(reading_time)}} className='btn btn-primary'>Mark As Read</button>
         </div>
     );
 };
@@ -40,6 +40,7 @@ const SingleBlogs = ({blog,handelAddBookMark}) => {
 SingleBlogs.propTypes={
     blog: PropTypes.object,
     handelAddBookMark: PropTypes.func,
+    readCount: PropTypes.func,
 }
 
 export default SingleBlogs;

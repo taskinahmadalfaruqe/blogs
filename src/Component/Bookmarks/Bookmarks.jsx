@@ -1,10 +1,10 @@
 import PropsTypes from 'prop-types'
 import SingleBookMark from '../SingleBookMark/SingleBookMark';
-const Bookmarks = ({bookMarkItem}) => {
+const Bookmarks = ({bookMarkItem,readTime}) => {
     return (
         <div className= 'md:mt-5 w-full lg:w-1/3 flex flex-col gap-5'>
             <div className="text-center border-2 border-[#eee] p-5 rounded-md text-[#6047EC] font-bold">
-                Spend Time: Minutes  
+                Spend Time: {readTime} Minutes  
             </div>
             <div className="border-2 border-[#eee] p-5 rounded-md">
                 <h2 className="text-center font-bold">Bookmark Blogs: {bookMarkItem.length} </h2>
@@ -22,6 +22,7 @@ const Bookmarks = ({bookMarkItem}) => {
     );
 };
 Bookmarks.propTypes={
-    Bookmarks: PropsTypes.object,
+    bookMarkItem: PropsTypes.array,
+    readTime: PropsTypes.number,
 }
 export default Bookmarks;

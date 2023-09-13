@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import SingleBlogs from '../LodeBlogs/SingleBlogs';
 import PropTypes from 'prop-types';
 
-const Blogs = ({handelAddBookMark}) => {
+const Blogs = ({handelAddBookMark,readCount}) => {
     const [blogsValue, setBlogs]= useState([]);
 
     // DATA FETCH FROM LOCAL STORAGE
@@ -27,6 +27,7 @@ const Blogs = ({handelAddBookMark}) => {
                             key={blog.id}
                             blog={blog}
                             handelAddBookMark={handelAddBookMark}
+                            readCount={readCount}
                         ></SingleBlogs>
                     )
                 })
@@ -36,6 +37,7 @@ const Blogs = ({handelAddBookMark}) => {
 };
 Blogs.propTypes={
     handelAddBookMark: PropTypes.func,
+    readCount: PropTypes.func,
 }
 export default Blogs;
 

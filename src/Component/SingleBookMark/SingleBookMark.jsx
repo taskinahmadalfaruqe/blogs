@@ -10,7 +10,7 @@ const SingleBookMark = ({singleBookmarkData}) => {
 }
 
 SingleBookMark.propTypes = {
-    SingleBookMark: PropTypes.object,
+    singleBookmarkData: PropTypes.object,
 }
 
 export default SingleBookMark;
